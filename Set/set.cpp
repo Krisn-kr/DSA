@@ -1,5 +1,6 @@
 #include<iostream>
 #include<set>
+
 using namespace std;
 
 void explainSet(){
@@ -56,8 +57,35 @@ void explainSet(){
 
 }
 
+// MultiSet
+
+void explainMultiSet(){
+
+    //  only sorted
+    //  can hold multiple comaon elements
+
+    multiset<int>ms;
+    ms.insert(1); //{1}
+    ms.insert(1); //{1, 1}
+    ms.insert(1); //{1, 1, 1}
+
+    ms.erase(1) ;// erases all 1's 
+
+    int cnt = ms.count(1);
+
+    // only a single one erase
+    ms.erase(ms.find(1));
+
+    auto it = ms.find(1);
+ms.erase(it, next(it, 2)); 
+// rest all fuunctions same as set
+
+}
+
 int main(){
     explainSet();
+     
 
+    explainMultiSet();
     return 0;
 }
