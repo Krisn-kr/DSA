@@ -3,6 +3,8 @@ using namespace std;
 
 void explainStack(){
 
+    // LIFO
+
     //  ====================================
     //        Time-Complexity = O(1)
     // ======================================
@@ -34,6 +36,12 @@ void explainStack(){
 // Queue
 
 void explainQueue(){
+
+    //  FIFO
+
+    //  TimeComplexity = O(1)
+
+
     queue<int> q;
     q.push(1); //{1}
     q.push(2); //{ 1, 2}
