@@ -29,6 +29,9 @@ void vect(){
     cout<<v1.size()<<"\n";
     cout<<v2.size()<<"\n";
     cout<<v3.size()<<"\n"; 
+
+
+
 }
 
 int main(){
