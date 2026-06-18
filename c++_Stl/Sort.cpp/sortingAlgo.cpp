@@ -1,4 +1,6 @@
 #include<iostream>
+
+
 using namespace std;
 
 bool comp(pair<int, int>p1, pair<int, int>p2)  //Comperator -----------> has to return a boolean 
@@ -29,7 +31,26 @@ void s(){
     // { {4, 1}, {2 , 1}, {1, 2} }
 }
 
+void explainBuilt_in_popcount(){
+    int num = 7;
+    int cnt = __builtin_popcount(num); //  number of 1's in bnary
+    // cnt = 3          [ 7 -> 111 ]
+    //  cnt for 6 = 2   [ 6 -> 110 ]
+
+    long long num = 122981243;
+    int cnt = __builtin_popcountll(num);  //for long values
+
+    string s = "123";
+    do{
+        cout<<s <<"\n";
+
+    } while(next_permutation(s.begin(), s.end()));
+
+    // int max = *max_element(a, a+n);
+}
+
 int main(){
+    explainBuilt_in_popcount();
     return 0;
 }
 
