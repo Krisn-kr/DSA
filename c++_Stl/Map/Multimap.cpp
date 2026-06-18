@@ -9,6 +9,12 @@ void explainMultiMap(){
     // only mapp[key] cannot be used here
     // store duplicate keys
 }
+
+void explainUnOrderedMap(){
+    // Same as set and unordered_Set difference. 
+    // Unique keys
+    // No duplicates
+}
 int main(){
     return 0;
 }
