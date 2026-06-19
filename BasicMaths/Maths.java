@@ -1,6 +1,6 @@
 package BasicMaths;
 import java.util.*;
-import java.math.*;
+// import java.math.*;
 // import 
 public class Maths {
 
@@ -11,7 +11,7 @@ public class Maths {
     
     static void extractDigits(){
         int n = 1234;
-        int digit;
+
         while(n>0){
             int lastDigit = n%10;
             System.out.println(lastDigit);
@@ -65,6 +65,7 @@ public class Maths {
         if(rev == dup){
             System.out.println("Entered number is a palindrom ");;
         }
+        sc.close();
 
     }
     
@@ -91,6 +92,8 @@ public class Maths {
             System.out.println("anstrong ");
         }else{
         System.out.println("not Anstrong");}
+
+        sc.close();
 
 
 
@@ -155,7 +158,7 @@ public class Maths {
 
 
 
-
+    sc.close();
     }
     
 
