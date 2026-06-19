@@ -28,6 +28,7 @@ public class Maths {
     // Reverse number
 
     static void reverseNumber(){
+
         int n = 12345;
         int rNum=0;
 
@@ -43,9 +44,32 @@ public class Maths {
 
         
     }
+
+    // palindrom
+    static void palindrom(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number : ");
+        int n = sc.nextInt();
+
+        // checking palindrom
+        int rev = 0;
+        int dup = n;
+
+        while(n>0){
+            int digit = n%10;
+            n /=10;
+            rev = (rev*10) + digit;
+        }
+
+        if(rev == dup){
+            System.out.println("Entered number is a palindrom ");;
+        }
+
+    }
     public static void main(String[] args) {
         extractDigits();
         reverseNumber();
+        palindrom();
         
     }
 }
