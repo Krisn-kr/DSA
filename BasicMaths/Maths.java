@@ -1,11 +1,12 @@
 package BasicMaths;
 import java.util.*;
+import java.math.*;
 // import 
 public class Maths {
 
 
     // ========================================
-    //  O(log 10 (N))
+    //  O(log10(N))
     // ========================================
     
     static void extractDigits(){
@@ -66,10 +67,105 @@ public class Maths {
         }
 
     }
+    
+
+    // Amstrog number
+    static void anstrongNumber(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number : ");
+        int n = sc.nextInt();
+
+        int dupl = n;
+        
+
+        int sum = 0;
+        while(n>0){
+            int digit = n%10;
+            n/=10;
+
+            sum = sum +(digit*digit*digit);
+
+        }
+        if(dupl == sum){
+            System.out.println("anstrong ");
+        }else{
+        System.out.println("not Anstrong");}
+
+
+
+    }
+    
+
+    // print all divisons
+// ==========================================
+//  O(n) -----> time complpexity
+// ============================================
+    static void division(){
+
+        System.out.println("\nDivion : ");
+   
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number : ");
+        int n = sc.nextInt();
+
+        List<Integer> list = new ArrayList<>();
+
+        for(int i =1 ; i<=n; i++){
+            if(n % i == 0){
+                System.out.println(n+ " divisible by : "+i );
+            }
+        }
+
+        // alternate way = better way
+
+
+        // for(int i = 1; i<= Math.sqrt(n); i++){
+        
+        // for better time complexity -----------use this
+            for(int i =1; i*i<=n ;i++ ){
+
+             // Storing in the list
+
+        
+
+            if(n % i ==0){
+                System.out.println(i);
+                list.add(i);
+                if(n/i != i){
+                    System.out.println(n/i);
+                    list.add(n/i);
+                }
+
+
+            }
+            
+
+        }
+        System.out.println("unsorted \nList elemet : "+ list);
+
+        System.out.print("Sorted \nList elements : ");
+
+       Collections.sort(list);
+       System.out.println(list);
+
+    
+
+       
+
+
+
+
+    }
+    
+
+
+    // 
     public static void main(String[] args) {
         extractDigits();
         reverseNumber();
-        palindrom();
-        
+        // palindrom();
+        // anstrongNumber();
+        division();
     }
 }
