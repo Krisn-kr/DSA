@@ -39,6 +39,22 @@ static void GCD(){
     // if(a>b){
     //     gcd = (a-b,b);
     // }
+    // =======================================================================================
+    //                                   BETTER SOLUTION----
+    // ===============               time complexity ---> O(log phi (min(a,b)))       ========
+
+    // while(a> 0 && b > 0){
+    //     if(a>b){ a = a % b;
+
+    //     }
+    //     else {
+    //       b = b%a;
+    //    }
+
+    //    if( a == 0){System.out.println(b);}
+    //    else {System.out.println(a);}
+    // }
+
 
     sc.close();
     
@@ -48,3 +64,4 @@ static void GCD(){
          
     }
 }
+  
