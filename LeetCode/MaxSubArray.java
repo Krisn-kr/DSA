@@ -1,24 +1,41 @@
 package LeetCode;
 
 
-// BruteForce approach
+
 public class MaxSubArray {
-    public static int maxSubArray(int[] nums){
+
+    // BruteForce approach
+    // Time Comple O(n^3) | Space Com O(1)
+
+    // public static int maxSubArray(int[] nums){
+    //     int maxSum = 0;
+    //     for(int i =0; i< nums.length; i++){
+    //         // subaaray
+    //         for(int j = i ; j<nums.length; j++){
+    //             int sum = 0;
+    //             for(int k = i ;k <= j ; k++){
+    //                 // updating sum
+    //                 sum += nums[k];
+    //                 maxSum = Math.max(maxSum,sum );
+    //             }
+    //         }
+    //     }
+    //   return  maxSum;
+    //     }
+
+//      Better approach
+        public static int maxSubArray(int[] nums){
         int maxSum = 0;
         for(int i =0; i< nums.length; i++){
-            // subaaray
+            int sum = 0;
             for(int j = i ; j<nums.length; j++){
-                int sum = 0;
-                for(int k = i ;k <= j ; k++){
-                    // updating sum
-                    sum += nums[k];
+                // update the sum here 
+                    sum += nums[j];
                     maxSum = Math.max(maxSum,sum );
                 }
             }
+            return  maxSum;
         }
-
-  return  maxSum;
-    }
 
     public void main(String[] args) {
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
