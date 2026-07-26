@@ -73,11 +73,7 @@ public class bettersolution {
 
                 System.out.print("\n");
             }
-
-        
-
-
-
+            sc.close();
 
     }
 }
