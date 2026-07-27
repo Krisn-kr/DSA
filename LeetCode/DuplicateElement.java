@@ -1,7 +1,7 @@
 package LeetCode;
 
 import java.util.HashMap;
-import java.util.HashSet;
+
 import java.util.Scanner;
 
 public class DuplicateElement {
@@ -37,14 +37,14 @@ public class DuplicateElement {
     //     return false;
     // }
 
-    // HashMap : 
+    // HashMap :  Iterator
     public static boolean Duplicate(int[]nums){
         // HashMap : Enhanced for loop
         HashMap<Integer,Integer> map = new HashMap<>();
         // int → Each element in the array is an integer.
         // num → Temporary variable that stores one element at a time.
         // nums → The array being traversed.
-        for(int num: nums){
+        for(int num: nums){ // Kind of for Loop ** Iterator **
             if(map.containsKey(num)){
                 return true;
             }
