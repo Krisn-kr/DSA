@@ -1,20 +1,35 @@
 package LeetCode;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class DuplicateElement {
 
     // method to find the duplicate element from the array
-    public static boolean Duplicate(int[] nums){
 
-        for(int i = 0; i< nums.length; i++){
-            for(int j = i+1; j < nums.length ; j++){
-                if(nums[i] == nums[j]){
-                    return true;
+    // Brute Force approach
+    // public static boolean Duplicate(int[] nums){
+    //     for(int i = 0; i< nums.length; i++){
+    //         for(int j = i+1; j < nums.length ; j++){
+    //             if(nums[i] == nums[j]){
+    //                 return true;
+    //             }
+    //         }
+    //     }
+    //     return false;
+    // }
 
-                }
-
+    public static boolean Duplicate(int[]nums){
+        // Creating a hashSet ------> stores only single value (no pairing ), no duplicates allowed
+        HashSet<Integer> set = new HashSet<>();
+        // Traversing through the array
+        for(int i = 0 ; i < nums.length ; i++){
+            // Cheking if the value is present in the HashSet or not
+            if(set.contains(nums[i])){
+                return true;
             }
+            // pushing the value to HashSet
+            set.add(nums[i]);
         }
         return false;
     }
