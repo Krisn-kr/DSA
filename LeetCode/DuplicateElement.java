@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -19,17 +20,36 @@ public class DuplicateElement {
     //     return false;
     // }
 
+
+    // HashSet 
+    // public static boolean Duplicate(int[]nums){
+    //     // Creating a hashSet ------> stores only single value (no pairing ), no duplicates allowed
+    //     HashSet<Integer> set = new HashSet<>();
+    //     // Traversing through the array
+    //     for(int i = 0 ; i < nums.length ; i++){
+    //         // Cheking if the value is present in the HashSet or not
+    //         if(set.contains(nums[i])){
+    //             return true;
+    //         }
+    //         // pushing the value to HashSet
+    //         set.add(nums[i]);
+    //     }
+    //     return false;
+    // }
+
+    // HashMap : 
     public static boolean Duplicate(int[]nums){
-        // Creating a hashSet ------> stores only single value (no pairing ), no duplicates allowed
-        HashSet<Integer> set = new HashSet<>();
-        // Traversing through the array
-        for(int i = 0 ; i < nums.length ; i++){
-            // Cheking if the value is present in the HashSet or not
-            if(set.contains(nums[i])){
+        // HashMap : Enhanced for loop
+        HashMap<Integer,Integer> map = new HashMap<>();
+        // int → Each element in the array is an integer.
+        // num → Temporary variable that stores one element at a time.
+        // nums → The array being traversed.
+        for(int num: nums){
+            if(map.containsKey(num)){
                 return true;
             }
-            // pushing the value to HashSet
-            set.add(nums[i]);
+            // Just to check if the set contains a Duplicate Value or not
+            map.put(num, 1);    
         }
         return false;
     }

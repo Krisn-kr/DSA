@@ -19,7 +19,7 @@ void iterators() {
 
 //======================================================
 
-    vector<int>::iterator it1 = v.end(); // location after lasgt element
+    vector<int>::iterator it1 = v.end(); // location after last element
 
     vector<int>::reverse_iterator it2 = v.rbegin();
     vector<int>::reverse_iterator it3 = v.rend();
