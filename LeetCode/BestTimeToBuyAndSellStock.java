@@ -7,7 +7,7 @@ public class BestTimeToBuyAndSellStock {
 
     public static int BuyAndSell(Vector<Integer> nums){
         int profit = 0;
-        int buy = nums.get(0);
+
         for(int i = 1; i < nums.size(); i++){
             if(nums.get(i) > nums.get(i-1)){
                 profit = profit + (nums.get(i) - nums.get(i-1));
