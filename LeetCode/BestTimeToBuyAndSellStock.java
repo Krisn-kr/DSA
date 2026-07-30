@@ -6,15 +6,15 @@ import java.util.Vector;
 public class BestTimeToBuyAndSellStock {
 
     public static int BuyAndSell(Vector<Integer> nums){
+        int buy = nums.get(0);
         int profit = 0;
 
-        for(int i = 1; i < nums.size(); i++){
+        for(int i = 1;  i < nums.size(); i++){
             if(nums.get(i) > nums.get(i-1)){
-                profit = profit + (nums.get(i) - nums.get(i-1));
-            }    
+                profit += (nums.get(i)-nums.get(i-1));
             }
-        
-        return profit ;
+        }
+        return profit;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
