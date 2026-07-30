@@ -6,7 +6,6 @@ import java.util.Vector;
 public class BestTimeToBuyAndSellStock {
 
     public static int BuyAndSell(Vector<Integer> nums){
-        int buy = nums.get(0);
         int profit = 0;
 
         for(int i = 1;  i < nums.size(); i++){
