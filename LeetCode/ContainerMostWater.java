@@ -14,5 +14,6 @@ public class ContainerMostWater {
             System.out.println("Enter the height of column "+i+1);
             arr[i] = sc.nextInt();
         }
+        sc.close();
     }
 }
