@@ -25,6 +25,18 @@ public class PascalTriangle {
 
         return element;
     }
+
+    public static void ColumnPrint(int row){
+        int ans = 1;
+        System.out.print(ans+" ");
+
+        for(int i = 1 ; i < row ; i++){
+            ans = ans * (row - i);
+            ans = ans/i;
+            System.out.print(ans+" ");
+        }  
+
+    }
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     
@@ -34,8 +46,14 @@ public class PascalTriangle {
 
     System.out.print("\nEnter the column number : ");
     int c = sc.nextInt();
-
+// Finding the element
     System.out.println(FindElement(r,c));
+
+    System.out.print("Enter the row number to print the entire column of the pascal triangle : ");
+    int row = sc.nextInt();
+    // Printing the column of the pascal triangle ========
+    System.out.println("Column of "+row +" :");
+    ColumnPrint(row);
 
 
     sc.close();
