@@ -48,9 +48,8 @@ public class RemoveOverlapping {
         }
 
         // calling the function to find the to erase the overlapping intervals
-        Soliution obj = new Soliution();
 
-        System.out.println("The number of overlap intervals are : "+ obj.eraseOverlapInterval(intervals));
+        System.out.println("The number of overlap intervals are : "+ Soliution.eraseOverlapInterval(intervals));
         
         sc.close();
     }
