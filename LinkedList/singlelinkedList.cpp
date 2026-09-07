@@ -28,6 +28,20 @@ Node * convertArr2LL(vector<int> &arr){
      return head;
     
 }
+
+// Length of the linked list
+int lengthOfNode(Node* head){
+    int count = 0;
+    Node* temp = head;
+
+    while (temp)
+    {
+        temp = temp->next;
+        count ++;
+    }
+    return count;
+    
+}
 int main(){
     vector<int> arr = {2, 5, 8, 7};
     Node* head = convertArr2LL(arr);
@@ -40,9 +54,8 @@ int main(){
         cout<< temp->data<<" ";
         temp = temp->next;
     }
-    
 
+    cout<<"\nLenght of the node : "<< lengthOfNode(head);
 
-    
     return 0;
 }
