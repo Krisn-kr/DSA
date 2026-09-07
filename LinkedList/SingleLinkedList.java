@@ -28,7 +28,17 @@ public class SingleLinkedList {
         }
         return head;
     
-        }       
+        }     
+        
+        private static int lengthOfLL(Node head){
+            int cnt =0; 
+            Node temp = head;
+            while (temp != null) {
+                temp = temp.next;
+                cnt++;
+            }
+            return cnt;
+        }
     
     public static void main(String[] args) {
         int[] arr = {2, 5, 6, 8};
@@ -42,6 +52,8 @@ public class SingleLinkedList {
         temp = temp.next;
 
         }
+        System.out.println("\n The length of the node : "+lengthOfLL(head));
     }
+    
     
 }
