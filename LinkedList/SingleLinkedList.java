@@ -24,6 +24,7 @@ public class SingleLinkedList {
         for( int i = 1; i< arr.length; i++){
         Node  temp = new Node(arr[i]);
         mover.next = temp;
+        mover = temp;
         }
         return head;
     
@@ -33,6 +34,14 @@ public class SingleLinkedList {
         int[] arr = {2, 5, 6, 8};
         Node head = convertArr2LL(arr);
         System.out.println(head.data);
+        Node temp = head;
+
+        // traversing the linked list
+    while(temp != null){
+        System.out.print(temp.data + " ");
+        temp = temp.next;
+
+        }
     }
     
 }
